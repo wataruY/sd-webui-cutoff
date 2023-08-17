@@ -163,7 +163,7 @@ class Script(scripts.Script):
     
     def ui(self, is_img2img):
         with gr.Accordion(NAME, open=False):
-            enabled = gr.Checkbox(label='Enabled', value=False)
+            enabled = gr.Checkbox(label='Enabled', value=False, elem_id="cutoff-enabled")
             targets = gr.Textbox(label='Target tokens (comma separated)', placeholder='red, blue')
             weight = gr.Slider(minimum=-1.0, maximum=2.0, step=0.01, value=0.5, label='Weight')
             with gr.Accordion('Details', open=False):
